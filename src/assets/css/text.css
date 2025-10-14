@@ -1,0 +1,22 @@
+.white-bold-name {
+    font-family: 'YouYuan', sans-serif; /* 使用浏览器自带的更简洁字体 */
+    top: 50%;
+    left: 50%;
+    color: white; /* 文字颜色为白色 */
+    font-weight: bold;
+    text-align: center;
+}
+
+.black-bold-name {
+    font-family: 'YouYuan', sans-serif; /* 使用浏览器自带的更简洁字体 */
+    top: 50%;
+    left: 50%;
+    color: black; /* 文字颜色为白色 */
+    font-weight: bold;
+    text-align: center;
+}
+
+.skill-description {
+    width: 100%;
+    font-size: 12px;
+}

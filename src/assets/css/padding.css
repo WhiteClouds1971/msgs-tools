@@ -1,0 +1,160 @@
+@import "val.css";
+
+@import "val.css";
+
+/* Padding - Top */
+.padding-top-xs {
+    padding-top: var(--spacing-xs);
+}
+
+.padding-top-s {
+    padding-top: var(--spacing-s);
+}
+
+.padding-top-m {
+    padding-top: var(--spacing-m);
+}
+
+.padding-top-l {
+    padding-top: var(--spacing-l);
+}
+
+.padding-top-xl {
+    padding-top: var(--spacing-xl);
+}
+
+/* Padding - Bottom */
+.padding-bottom-xs {
+    padding-bottom: var(--spacing-xs);
+}
+
+.padding-bottom-s {
+    padding-bottom: var(--spacing-s);
+}
+
+.padding-bottom-m {
+    padding-bottom: var(--spacing-m);
+}
+
+.padding-bottom-l {
+    padding-bottom: var(--spacing-l);
+}
+
+.padding-bottom-xl {
+    padding-bottom: var(--spacing-xl);
+}
+
+/* Padding - Left */
+.padding-left-xs {
+    padding-left: var(--spacing-xs);
+}
+
+.padding-left-s {
+    padding-left: var(--spacing-s);
+}
+
+.padding-left-m {
+    padding-left: var(--spacing-m);
+}
+
+.padding-left-l {
+    padding-left: var(--spacing-l);
+}
+
+.padding-left-xl {
+    padding-left: var(--spacing-xl);
+}
+
+/* Padding - Right */
+.padding-right-xs {
+    padding-right: var(--spacing-xs);
+}
+
+.padding-right-s {
+    padding-right: var(--spacing-s);
+}
+
+.padding-right-m {
+    padding-right: var(--spacing-m);
+}
+
+.padding-right-l {
+    padding-right: var(--spacing-l);
+}
+
+.padding-right-xl {
+    padding-right: var(--spacing-xl);
+}
+
+/* 同时设置左右 padding */
+.padding-x-xs {
+    padding-left: var(--spacing-xs);
+    padding-right: var(--spacing-xs);
+}
+
+.padding-x-s {
+    padding-left: var(--spacing-s);
+    padding-right: var(--spacing-s);
+}
+
+.padding-x-m {
+    padding-left: var(--spacing-m);
+    padding-right: var(--spacing-m);
+}
+
+.padding-x-l {
+    padding-left: var(--spacing-l);
+    padding-right: var(--spacing-l);
+}
+
+.padding-x-xl {
+    padding-left: var(--spacing-xl);
+    padding-right: var(--spacing-xl);
+}
+
+/* 同时设置上下 padding */
+.padding-y-xs {
+    padding-top: var(--spacing-xs);
+    padding-bottom: var(--spacing-xs);
+}
+
+.padding-y-s {
+    padding-top: var(--spacing-s);
+    padding-bottom: var(--spacing-s);
+}
+
+.padding-y-m {
+    padding-top: var(--spacing-m);
+    padding-bottom: var(--spacing-m);
+}
+
+.padding-y-l {
+    padding-top: var(--spacing-l);
+    padding-bottom: var(--spacing-l);
+}
+
+.padding-y-xl {
+    padding-top: var(--spacing-xl);
+    padding-bottom: var(--spacing-xl);
+}
+
+/* 可选：全方向 padding（四边相同） */
+.padding-xs {
+    padding: var(--spacing-xs);
+}
+
+.padding-s {
+    padding: var(--spacing-s);
+}
+
+.padding-m {
+    padding: var(--spacing-m);
+}
+
+.padding-l {
+    padding: var(--spacing-l);
+}
+
+.padding-xl {
+    padding: var(--spacing-xl);
+}

@@ -1,0 +1,136 @@
+@import "val.css";
+
+/* Margin - Top */
+.margin-top-xs {
+    margin-top: var(--spacing-xs);
+}
+
+.margin-top-s {
+    margin-top: var(--spacing-s);
+}
+
+.margin-top-m {
+    margin-top: var(--spacing-m);
+}
+
+.margin-top-l {
+    margin-top: var(--spacing-l);
+}
+
+.margin-top-xl {
+    margin-top: var(--spacing-xl);
+}
+
+/* Margin - Bottom */
+.margin-bottom-xs {
+    margin-bottom: var(--spacing-xs);
+}
+
+.margin-bottom-s {
+    margin-bottom: var(--spacing-s);
+}
+
+.margin-bottom-m {
+    margin-bottom: var(--spacing-m);
+}
+
+.margin-bottom-l {
+    margin-bottom: var(--spacing-l);
+}
+
+.margin-bottom-xl {
+    margin-bottom: var(--spacing-xl);
+}
+
+/* Margin - Left */
+.margin-left-xs {
+    margin-left: var(--spacing-xs);
+}
+
+.margin-left-s {
+    margin-left: var(--spacing-s);
+}
+
+.margin-left-m {
+    margin-left: var(--spacing-m);
+}
+
+.margin-left-l {
+    margin-left: var(--spacing-l);
+}
+
+.margin-left-xl {
+    margin-left: var(--spacing-xl);
+}
+
+/* Margin - Right */
+.margin-right-xs {
+    margin-right: var(--spacing-xs);
+}
+
+.margin-right-s {
+    margin-right: var(--spacing-s);
+}
+
+.margin-right-m {
+    margin-right: var(--spacing-m);
+}
+
+.margin-right-l {
+    margin-right: var(--spacing-l);
+}
+
+.margin-right-xl {
+    margin-right: var(--spacing-xl);
+}
+
+/* 可选：同时设置左右或上下 margin */
+.margin-x-xs {
+    margin-left: var(--spacing-xs);
+    margin-right: var(--spacing-xs);
+}
+
+.margin-x-s {
+    margin-left: var(--spacing-s);
+    margin-right: var(--spacing-s);
+}
+
+.margin-x-m {
+    margin-left: var(--spacing-m);
+    margin-right: var(--spacing-m);
+}
+
+.margin-x-l {
+    margin-left: var(--spacing-l);
+    margin-right: var(--spacing-l);
+}
+
+.margin-x-xl {
+    margin-left: var(--spacing-xl);
+    margin-right: var(--spacing-xl);
+}
+
+.margin-y-xs {
+    margin-top: var(--spacing-xs);
+    margin-bottom: var(--spacing-xs);
+}
+
+.margin-y-s {
+    margin-top: var(--spacing-s);
+    margin-bottom: var(--spacing-s);
+}
+
+.margin-y-m {
+    margin-top: var(--spacing-m);
+    margin-bottom: var(--spacing-m);
+}
+
+.margin-y-l {
+    margin-top: var(--spacing-l);
+    margin-bottom: var(--spacing-l);
+}
+
+.margin-y-xl {
+    margin-top: var(--spacing-xl);
+    margin-bottom: var(--spacing-xl);
+}
