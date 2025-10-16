@@ -110,19 +110,16 @@ export default [
     code: 'ZiRuo',
     name: '自若',
     text: '转换技，锁定技，阳：当你使用最左侧的手牌时，你摸一张牌。阴：当你使用最右侧的手牌时，你摸一张牌。若如此做，你本回合不能整理手牌。',
-    voiceCodes: ['$xufa:1', '$xufa:2'],
     skills: [
       {
         cover: YANG_COVER,
         code: '阳',
         keywords: ['阳：当你使用最左侧的手牌时，你摸一张牌。'],
-        voiceCodes: ['$ziruo:1'],
       },
       {
         cover: YIN_COVER,
         code: '阴',
         keywords: ['阴：当你使用最右侧的手牌时，你摸一张牌。'],
-        voiceCodes: ['$ziruo:2'],
       },
     ],
     tags: [Tags.O, '蒋琬'],

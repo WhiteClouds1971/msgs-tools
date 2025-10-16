@@ -36,10 +36,8 @@
   import { ref } from 'vue';
   import { randomColor } from '@/util/random.js';
   import { useRoute } from 'vue-router';
-  import { useVoiceStore } from '@/stores/voiceStore.js';
 
   const route = useRoute();
-  const voiceStore = useVoiceStore();
 
   const activeName = ref(null);
   const validYinYang = reactive(yinYang.filter(it => !it.hidden));
@@ -47,9 +45,6 @@
 
   const add = yy => {
     selectedYinYang.unshift(yy);
-    if ((yy.voiceCodes || []).length > 0) {
-      voiceStore.playByCodes(yy.voiceCodes);
-    }
   };
 
   watch(

@@ -10,7 +10,6 @@
         :text="currentText || '点击搜索台词'"
         @click="
           () => {
-            store.playFromSystem(['$#click']);
             showScript = true;
           }
         "
@@ -79,7 +78,6 @@
 
   // 循环切换播放模式
   const cyclePlayMode = () => {
-    store.playFromSystem(['$#click']);
     const modes = ['sequence', 'random', 'single'];
     const currentIndex = modes.indexOf(playMode.value);
     const nextIndex = (currentIndex + 1) % modes.length;
@@ -103,7 +101,6 @@
   // 播放控制
   const togglePlayPause = () => store.togglePlayPause();
   const toggleMute = () => {
-    store.playFromSystem(['$#click']);
     store.toggleMute();
   };
 </script>

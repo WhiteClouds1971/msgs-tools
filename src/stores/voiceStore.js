@@ -125,7 +125,7 @@ export const useVoiceStore = defineStore('voice', {
     },
 
     playFromSystem(codes) {
-      // if (this.isMute) return;
+      if (this.isMute) return;
 
       const validVoices = codes.map(code => allVoicesMap[code]).filter(Boolean);
 
@@ -137,16 +137,6 @@ export const useVoiceStore = defineStore('voice', {
       const audio = new Audio(_getVoiceUrl(randomVoice));
 
       audio.play().then(r => {});
-    },
-
-    playFromBtn(codes) {
-      if (codes?.length > 0) {
-        this.playByCodes(codes);
-      } else if (this.currentVoices?.length > 0) {
-        this.playFromCurrentCollection();
-      } else {
-        this.playFromSystem(['$#click']);
-      }
     },
 
     toggleMute() {

@@ -18,8 +18,6 @@
 
   // 定义点击事件处理函数
   const handleClick = () => {
-    voiceStore.playFromBtn(props.menuConstant.voiceCodes);
-
     if (props.menuConstant.url) {
       // 路由跳转
       router.push(props.menuConstant.url);
