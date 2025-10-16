@@ -2,6 +2,9 @@
   import { ref } from 'vue';
   import { useRouter } from 'vue-router';
   import { useModal } from '@/components/Modal/index.js';
+  import { useVoiceStore } from '@/stores/voiceStore.js';
+
+  const voiceStore = useVoiceStore();
 
   const props = defineProps({
     menuConstant: {
@@ -15,8 +18,10 @@
 
   // 定义点击事件处理函数
   const handleClick = () => {
-    // 路由跳转
+    voiceStore.playFromBtn(props.menuConstant.voiceCodes);
+
     if (props.menuConstant.url) {
+      // 路由跳转
       router.push(props.menuConstant.url);
       return;
     }

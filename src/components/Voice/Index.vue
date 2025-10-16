@@ -8,7 +8,12 @@
         class="flex-full voice-text"
         :scrollable="isPlaying ? null : false"
         :text="currentText || '点击搜索台词'"
-        @click="showScript = true"
+        @click="
+          () => {
+            store.playFromSystem(['$#click']);
+            showScript = true;
+          }
+        "
       >
         <template #left-icon>
           <div class="flex-row flex-center height-100" @click.stop="toggleMute">
@@ -54,7 +59,7 @@
 </template>
 
 <script setup>
-  import { ref, computed } from 'vue';
+  import { ref, computed, watch } from 'vue';
   import { useVoiceStore } from '@/stores/voiceStore';
   import { allVoicesMap } from '@/assets/constants/Voice/index.js';
   import VoiceDisplay from '@/components/Voice/VoiceDisplay.vue';
@@ -74,6 +79,7 @@
 
   // 循环切换播放模式
   const cyclePlayMode = () => {
+    store.playFromSystem(['$#click']);
     const modes = ['sequence', 'random', 'single'];
     const currentIndex = modes.indexOf(playMode.value);
     const nextIndex = (currentIndex + 1) % modes.length;
@@ -96,7 +102,10 @@
 
   // 播放控制
   const togglePlayPause = () => store.togglePlayPause();
-  const toggleMute = () => store.toggleMute();
+  const toggleMute = () => {
+    store.playFromSystem(['$#click']);
+    store.toggleMute();
+  };
 </script>
 
 <style lang="less" scoped>

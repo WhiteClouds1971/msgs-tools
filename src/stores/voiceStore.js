@@ -124,6 +124,31 @@ export const useVoiceStore = defineStore('voice', {
       _playSingle(voice, this);
     },
 
+    playFromSystem(codes) {
+      // if (this.isMute) return;
+
+      const validVoices = codes.map(code => allVoicesMap[code]).filter(Boolean);
+
+      if (validVoices.length === 0) return;
+
+      const randomVoice =
+        validVoices[Math.floor(Math.random() * validVoices.length)];
+
+      const audio = new Audio(_getVoiceUrl(randomVoice));
+
+      audio.play().then(r => {});
+    },
+
+    playFromBtn(codes) {
+      if (codes?.length > 0) {
+        this.playByCodes(codes);
+      } else if (this.currentVoices?.length > 0) {
+        this.playFromCurrentCollection();
+      } else {
+        this.playFromSystem(['$#click']);
+      }
+    },
+
     toggleMute() {
       this.isMute = !this.isMute;
       if (this.isMute && this.currentAudio) {

@@ -12,12 +12,16 @@ const StickyCollections = {
     {
       code: '$#sock',
       text: '拖鞋 ！！！',
-      url: '/Voices/Sticky/sock.mp3',
       tags: [Tags.VoiceChangZhu],
     },
     {
       code: '$#wanjunqushou',
       text: '无双 万军取首！',
+      tags: [Tags.VoiceChangZhu],
+    },
+    {
+      code: '$#qiwu1',
+      text: '诶~没打着~',
       tags: [Tags.VoiceChangZhu],
     },
   ],

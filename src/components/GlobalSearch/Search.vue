@@ -48,7 +48,9 @@
   import { v4 } from 'uuid';
   import { mdToHtml } from '@/plugins/marked.js';
   import { shuffleWithSeed } from '@/util/random.js';
+  import { useVoiceStore } from '@/stores/voiceStore.js';
 
+  const voiceStore = useVoiceStore();
   const emits = defineEmits(['cancel']);
   const props = defineProps({
     showSearch: false,
@@ -299,6 +301,7 @@
   const onSearch = () => {};
 
   const onCancel = () => {
+    voiceStore.playFromSystem(['$#click']);
     onCancelClick();
   };
 

@@ -23,12 +23,14 @@
   import { ref } from 'vue';
   import Search from '@/components/GlobalSearch/Search.vue';
   import VoiceDisplay from '@/components/Voice/VoiceDisplay.vue';
+  import { useVoiceStore } from '@/stores/voiceStore.js';
 
+  const voiceStore = useVoiceStore();
   const showSearch = ref(false);
 
   const openSearch = () => {
+    voiceStore.playFromSystem(['$#click']);
     showSearch.value = true;
-    document.body.style.overflow = 'hidden';
   };
 </script>
 

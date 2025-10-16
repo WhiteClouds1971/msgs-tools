@@ -1,9 +1,11 @@
 import { StickyCollections } from '@/assets/constants/Voice/sticky.js';
 import { HeroesCollections } from '@/assets/constants/Voice/Heroes/index.js';
+import { SystemCollections } from '@/assets/constants/Voice/system.js';
 
 const STICKY_COLLECTION_KEY = 'Sticky';
 
 const voiceCollections = {
+  System: SystemCollections,
   Sticky: StickyCollections,
   ...HeroesCollections,
 };

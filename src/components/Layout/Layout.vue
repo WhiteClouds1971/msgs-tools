@@ -3,9 +3,11 @@
   import { useRoute, useRouter } from 'vue-router';
   import GlobalSearch from '@/components/GlobalSearch/Index.vue';
   import VoiceDashboard from '@/components/Voice/Index.vue';
+  import { useVoiceStore } from '@/stores/voiceStore.js';
 
   const route = useRoute();
   const router = useRouter();
+  const voiceStore = useVoiceStore();
 
   const tabs = ref([{ path: '/', title: '菜单', name: 'Menus' }]);
 
@@ -23,6 +25,7 @@
   };
 
   const removeTab = path => {
+    voiceStore.playFromSystem(['$#click']);
     const index = tabs.value.findIndex(tab => tab.path === path);
     if (index !== -1) {
       tabs.value.splice(index, 1);
@@ -54,10 +57,12 @@
   );
 
   const onClickLeft = () => {
+    voiceStore.playFromSystem(['$#click']);
     router.push('/');
   };
 
   const onClickRight = () => {
+    voiceStore.playFromSystem(['$#click']);
     router.push('/QA');
   };
 </script>
@@ -86,7 +91,12 @@
     :active="route.path"
     :swipeable="true"
     :ellipsis="false"
-    @click-tab="({ name }) => router.push(name)"
+    @click-tab="
+      ({ name }) => {
+        voiceStore.playFromSystem(['$#click']);
+        router.push(name);
+      }
+    "
   >
     <van-tab
       v-for="tab in tabs"
