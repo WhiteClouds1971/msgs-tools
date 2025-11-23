@@ -9,7 +9,6 @@ import { VantResolver } from '@vant/auto-import-resolver';
 // https://vite.dev/config/
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd());
-
   return {
     plugins: [
       vue(),
