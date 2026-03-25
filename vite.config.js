@@ -5,6 +5,8 @@ import vue from '@vitejs/plugin-vue';
 import AutoImport from 'unplugin-auto-import/vite';
 import Components from 'unplugin-vue-components/vite';
 import { VantResolver } from '@vant/auto-import-resolver';
+import viteImagemin from 'vite-plugin-imagemin';
+import imageOrientationPlugin from './src/plugins/imageOrientation.js';
 
 // https://vite.dev/config/
 export default defineConfig(({ mode }) => {
@@ -13,6 +15,7 @@ export default defineConfig(({ mode }) => {
   return {
     plugins: [
       vue(),
+      imageOrientationPlugin(),
       AutoImport({
         imports: [
           'vue',
@@ -23,6 +26,36 @@ export default defineConfig(({ mode }) => {
         resolvers: [VantResolver()],
       }),
       Components({ resolvers: [VantResolver()] }),
+      viteImagemin({
+        gifsicle: {
+          optimizationLevel: 3,
+          interlaced: false,
+        },
+        optipng: {
+          optimizationLevel: 7,
+        },
+        mozjpeg: {
+          quality: 80,
+          progressive: true,
+        },
+        jpegtran: {
+          progressive: true,
+        },
+        svgo: {
+          plugins: [
+            {
+              name: 'removeViewBox',
+            },
+            {
+              name: 'removeEmptyAttrs',
+              active: false,
+            },
+          ],
+        },
+        webp: {
+          quality: 80,
+        },
+      }),
     ],
     resolve: {
       // https://cn.vitejs.dev/config/#resolve-alias
