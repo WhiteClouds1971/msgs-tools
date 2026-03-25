@@ -5,7 +5,6 @@ import vue from '@vitejs/plugin-vue';
 import AutoImport from 'unplugin-auto-import/vite';
 import Components from 'unplugin-vue-components/vite';
 import { VantResolver } from '@vant/auto-import-resolver';
-import vitePluginImagemin from 'vite-plugin-imagemin';
 
 // https://vite.dev/config/
 export default defineConfig(({ mode }) => {
@@ -24,22 +23,6 @@ export default defineConfig(({ mode }) => {
         resolvers: [VantResolver()],
       }),
       Components({ resolvers: [VantResolver()] }),
-      ...(process.env.NODE_ENV === 'production'
-        ? [
-            vitePluginImagemin({
-              gifsicle: { optimizationLevel: 3, interlaced: false },
-              mozjpeg: { quality: 75 },
-              optipng: { optimizationLevel: 5 },
-              pngquant: { quality: [0.65, 0.8], speed: 4 },
-              svgo: {
-                plugins: [
-                  { name: 'removeViewBox' },
-                  { name: 'removeEmptyAttrs', active: false },
-                ],
-              },
-            }),
-          ]
-        : []),
     ],
     resolve: {
       // https://cn.vitejs.dev/config/#resolve-alias
