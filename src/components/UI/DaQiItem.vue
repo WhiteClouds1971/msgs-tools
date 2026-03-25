@@ -3,6 +3,7 @@
     <van-image
       style="width: 100%"
       v-for="image in dq?.images || []"
+      :key="image"
       :src="image"
     ></van-image>
   </div>
